@@ -1,6 +1,6 @@
 #include "resortreservation.h"
 #include "ui_resortreservation.h"
-//hello world^G
+
 ResortReservation::ResortReservation(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::ResortReservation)
