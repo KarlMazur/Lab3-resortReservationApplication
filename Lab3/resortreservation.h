@@ -52,6 +52,10 @@ private slots:
 
     void on_roomTypeSelection_currentIndexChanged(const QString &arg1);
 
+
+
+    void on_creditCardType_currentIndexChanged(const QString &arg1);
+
 private:
     Ui::ResortReservation *ui;
 };

@@ -14,6 +14,11 @@ QDate newDate=issueDate.addDays(1);
 
 ui->endDateCalander->setDate(newDate);
 ui->startDateCalander->setDate(QDate::currentDate());
+ui->startDateCalander->setMinimumDate(QDate::currentDate());
+ newDate=issueDate.addDays(8);
+ui->endDateCalander->setMaximumDate(newDate);
+ui->creditCardNumber->setInputMask("9999-999999-99999;_");
+ui->expDateLineEdit->setInputMask("99/9999;_");
 
 
 }
@@ -183,5 +188,19 @@ void ResortReservation::on_roomTypeSelection_currentIndexChanged(const QString &
         ui->nextButton->hide();
     else
         ui->nextButton->show();
+
+}
+
+
+
+void ResortReservation::on_creditCardType_currentIndexChanged(const QString &arg1)
+{
+    if(arg1=="American Express"){
+ui->creditCardNumber->setInputMask("9999-999999-99999;_");
+    }
+    else if(arg1=="Visa"||arg1=="Mastercard"||arg1=="Discover"){
+ui->creditCardNumber->setInputMask("9999-9999-9999-9999;_");
+    }
+
 
 }
