@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="ReservationInfo">
      <widget class="QGroupBox" name="groupBox">
@@ -713,7 +713,7 @@
       <widget class="QLabel" name="nameLabel">
        <property name="geometry">
         <rect>
-         <x>10</x>
+         <x>20</x>
          <y>70</y>
          <width>59</width>
          <height>16</height>
@@ -726,7 +726,7 @@
       <widget class="QLabel" name="checkInDateLabel">
        <property name="geometry">
         <rect>
-         <x>10</x>
+         <x>20</x>
          <y>90</y>
          <width>59</width>
          <height>16</height>
@@ -739,7 +739,7 @@
       <widget class="QLabel" name="checkOutDateLabel">
        <property name="geometry">
         <rect>
-         <x>10</x>
+         <x>20</x>
          <y>110</y>
          <width>81</width>
          <height>16</height>
@@ -752,7 +752,7 @@
       <widget class="QLabel" name="roomTypeLabel_3">
        <property name="geometry">
         <rect>
-         <x>10</x>
+         <x>20</x>
          <y>130</y>
          <width>81</width>
          <height>16</height>
@@ -772,13 +772,13 @@
         </rect>
        </property>
        <property name="text">
-        <string>Parking;</string>
+        <string>Parking:</string>
        </property>
       </widget>
       <widget class="QLabel" name="numberOfAdultsLabel">
        <property name="geometry">
         <rect>
-         <x>10</x>
+         <x>20</x>
          <y>170</y>
          <width>121</width>
          <height>16</height>
@@ -806,7 +806,7 @@
         <rect>
          <x>210</x>
          <y>70</y>
-         <width>59</width>
+         <width>171</width>
          <height>16</height>
         </rect>
        </property>
@@ -818,8 +818,8 @@
        <property name="geometry">
         <rect>
          <x>210</x>
-         <y>100</y>
-         <width>59</width>
+         <y>90</y>
+         <width>181</width>
          <height>16</height>
         </rect>
        </property>
@@ -831,8 +831,8 @@
        <property name="geometry">
         <rect>
          <x>210</x>
-         <y>120</y>
-         <width>59</width>
+         <y>110</y>
+         <width>181</width>
          <height>16</height>
         </rect>
        </property>
@@ -844,8 +844,8 @@
        <property name="geometry">
         <rect>
          <x>210</x>
-         <y>140</y>
-         <width>59</width>
+         <y>130</y>
+         <width>181</width>
          <height>16</height>
         </rect>
        </property>
@@ -857,8 +857,8 @@
        <property name="geometry">
         <rect>
          <x>210</x>
-         <y>160</y>
-         <width>59</width>
+         <y>150</y>
+         <width>181</width>
          <height>16</height>
         </rect>
        </property>
@@ -870,8 +870,8 @@
        <property name="geometry">
         <rect>
          <x>210</x>
-         <y>180</y>
-         <width>59</width>
+         <y>170</y>
+         <width>181</width>
          <height>16</height>
         </rect>
        </property>
@@ -883,7 +883,7 @@
        <property name="geometry">
         <rect>
          <x>210</x>
-         <y>200</y>
+         <y>190</y>
          <width>59</width>
          <height>16</height>
         </rect>
@@ -892,7 +892,7 @@
         <string>TextLabel</string>
        </property>
       </widget>
-      <widget class="QLabel" name="label_2">
+      <widget class="QLabel" name="paymentLabel">
        <property name="geometry">
         <rect>
          <x>30</x>
@@ -903,6 +903,58 @@
        </property>
        <property name="text">
         <string>Payment</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="totalAmountLabel">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>240</y>
+         <width>91</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Total Amount:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="finalcreditCardNumberLabel">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>260</y>
+         <width>131</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Last 4 digits of Card:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="finalCostAmount">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>240</y>
+         <width>59</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>akslfjl</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="finalLastFourDigits">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>270</y>
+         <width>59</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
        </property>
       </widget>
      </widget>

@@ -221,6 +221,12 @@ void ResortReservation::on_confirmationButton_clicked()
     QString roomType=ui->roomTypeSelection->currentText();
     QString numberOfAdults=ui->numberOfAdultsSpinBox->text();
     QString numberOfChildren=ui->numberOfChildrenSpinBox->text();
+    QString finalCostAmount=ui->totalCostLabel->text();
+    QString creditCardNumber=ui->creditCardNumber->text();
+    int lengthOfcreditCard=creditCardNumber.length();
+    int firstPositionOfFourdigits=lengthOfcreditCard-3;
+    QString finalFourDigits=creditCardNumber.mid(firstPositionOfFourdigits,lengthOfcreditCard);
+
     bool parkingChecked=ui->vechicleParkingCheckBox->checkState();
     comfirm.setText("Are you sure you want to continue?");
         comfirm.setStandardButtons(QMessageBox::Yes|QMessageBox::No);
@@ -234,13 +240,13 @@ ui->finalCheckOutDate->setText(checkOutDate);
 ui->finalRoomType->setText(roomType);
 ui->finalNumberOfAdults->setText(numberOfAdults);
 ui->finalNumberOfChildren->setText(numberOfChildren);
+ui->finalCostAmount->setText(finalCostAmount);
+ui->finalLastFourDigits->setText(finalFourDigits);
 if(parkingChecked==0)
     ui->finalParking->setText("No");
 else {
     ui->finalParking->setText("Yes");
 }
-
-
         }
         else
             ui->roomReservation->setCurrentIndex(3);
