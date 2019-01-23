@@ -97,12 +97,53 @@ void ResortReservation::on_startDateCalander_userDateChanged(const QDate &date)
 
 void ResortReservation::on_nextButton_clicked()
 {
-int finalCost=0;
-int tax=0;
 ui->roomReservation->setCurrentIndex(1);
+    double finalCost=0;
+double costOfRoomOneNight=0;
+double costOfRoom=0;
+double tax=0;
+double resortFee=15;
+double firstDay=0;
+double lastDay=0;
+double days=0;
+QString stringCostOfRoom;
+QString stringtaxCost;
+QString stringResortFee;
+QString stringfinalCost;
+QString reservationName=ui->reservationNameText->toPlainText();
+ui->nameOnReservation->setText(reservationName);
+
+
 QString roomType= ui->roomTypeSelection->currentText();
+ui->roomTypeLabel->setText(roomType);
+QString costOfRoomText=ui->actualPriceLabel->text();
+costOfRoomOneNight=costOfRoomText.toInt();
+bool parking=ui->vechicleParkingCheckBox->checkState();
+if(parking==1){
+    finalCost=finalCost+12.75;
+    ui->parkingCostLabel->setText("12.75");
+}
+else{
+    ui->parkingCostLabel->setText("$0");
+}
+QDate beginningDate=ui->startDateCalander->date();
+QDate endDate=ui->endDateCalander->date();
+firstDay=beginningDate.day();
+lastDay=endDate.day();
+days =lastDay-firstDay;
 
-
+resortFee=resortFee*days;
+costOfRoom=costOfRoomOneNight*days;
+tax=costOfRoom*.15;
+finalCost=finalCost+tax+costOfRoom+resortFee;
+stringCostOfRoom=QString::number(costOfRoom);
+stringtaxCost=QString::number(tax);
+stringResortFee=QString::number(resortFee);
+stringfinalCost=QString::number(finalCost);
+ui->priceForRoomLabel->setText(stringCostOfRoom);
+ui->taxCostLabel->setText(stringtaxCost);
+ui->ResortCostLabel->setText(stringResortFee);
+ui->totalCostLabel->setText(stringfinalCost);
 }
 
 void ResortReservation::on_roomTypeSelection_activated(const QString &arg1)
@@ -113,23 +154,23 @@ void ResortReservation::on_roomTypeSelection_activated(const QString &arg1)
 QString atriumOneKingRoom  ="An Atrium 1-king room";
 
 if(arg1==standardTwoQueenRoom){
-  ui->actualPriceLabel->setText("$284");
+  ui->actualPriceLabel->setText("284");
   ui->numberOfAdultsSpinBox->setMaximum(4);
   ui->numberOfChildrenSpinBox->setMaximum(3);
 }
 else if(arg1==standardOneKingRoom){
-  ui->actualPriceLabel->setText("$290");
+  ui->actualPriceLabel->setText("290");
   ui->numberOfAdultsSpinBox->setMaximum(3);
   ui->numberOfChildrenSpinBox->setMaximum(2);
 }
 else if(arg1==atriumTwoQueenRoom){
-    ui->actualPriceLabel->setText("$325");
+    ui->actualPriceLabel->setText("325");
     ui->numberOfAdultsSpinBox->setMaximum(4);
     ui->numberOfChildrenSpinBox->setMaximum(3);
 }
 
 else if(arg1==atriumOneKingRoom){
-    ui->actualPriceLabel->setText("$350");
+    ui->actualPriceLabel->setText("350");
     ui->numberOfAdultsSpinBox->setMaximum(4);
     ui->numberOfChildrenSpinBox->setMaximum(3);
 }
