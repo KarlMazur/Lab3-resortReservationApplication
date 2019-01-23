@@ -14,7 +14,7 @@
    <string>ResortReservation</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QStackedWidget" name="stackedWidget">
+   <widget class="QStackedWidget" name="roomReservation">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -27,37 +27,32 @@
      <number>0</number>
     </property>
     <widget class="QWidget" name="page">
-     <widget class="QTextEdit" name="ReservationNameText">
-      <property name="geometry">
-       <rect>
-        <x>150</x>
-        <y>20</y>
-        <width>161</width>
-        <height>21</height>
-       </rect>
-      </property>
-     </widget>
      <widget class="QGroupBox" name="groupBox">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>110</y>
-        <width>451</width>
-        <height>141</height>
+        <x>-10</x>
+        <y>80</y>
+        <width>541</width>
+        <height>211</height>
        </rect>
       </property>
       <property name="title">
-       <string>GroupBox</string>
+       <string/>
       </property>
-      <widget class="QComboBox" name="comboBox">
+      <widget class="QComboBox" name="roomTypeSelection">
        <property name="geometry">
         <rect>
-         <x>0</x>
-         <y>30</y>
-         <width>301</width>
+         <x>80</x>
+         <y>50</y>
+         <width>291</width>
          <height>21</height>
         </rect>
        </property>
+       <item>
+        <property name="text">
+         <string>------------------------------------------</string>
+        </property>
+       </item>
        <item>
         <property name="text">
          <string>A Standard 2-queen room</string>
@@ -65,7 +60,7 @@
        </item>
        <item>
         <property name="text">
-         <string>An Atrium 2-queen room</string>
+         <string>A Standard 1-king room</string>
         </property>
        </item>
        <item>
@@ -75,29 +70,29 @@
        </item>
        <item>
         <property name="text">
-         <string>A Standard 1-king room</string>
+         <string>An Atrium 2-queen room</string>
         </property>
        </item>
       </widget>
-      <widget class="QLabel" name="PriceLabel">
+      <widget class="QLabel" name="priceLabel">
        <property name="geometry">
         <rect>
-         <x>310</x>
-         <y>30</y>
-         <width>59</width>
+         <x>370</x>
+         <y>50</y>
+         <width>101</width>
          <height>16</height>
         </rect>
        </property>
        <property name="text">
-        <string>Price:</string>
+        <string>Price Per Night:</string>
        </property>
       </widget>
-      <widget class="QLabel" name="ActualPriceLabel">
+      <widget class="QLabel" name="actualPriceLabel">
        <property name="geometry">
         <rect>
-         <x>360</x>
-         <y>30</y>
-         <width>59</width>
+         <x>470</x>
+         <y>50</y>
+         <width>41</width>
          <height>16</height>
         </rect>
        </property>
@@ -108,8 +103,8 @@
       <widget class="QSpinBox" name="numberOfAdultsSpinBox">
        <property name="geometry">
         <rect>
-         <x>160</x>
-         <y>50</y>
+         <x>150</x>
+         <y>80</y>
          <width>42</width>
          <height>22</height>
         </rect>
@@ -125,7 +120,7 @@
        <property name="geometry">
         <rect>
          <x>310</x>
-         <y>50</y>
+         <y>80</y>
          <width>42</width>
          <height>22</height>
         </rect>
@@ -138,20 +133,20 @@
        <property name="geometry">
         <rect>
          <x>40</x>
-         <y>50</y>
+         <y>80</y>
          <width>91</width>
          <height>16</height>
         </rect>
        </property>
        <property name="text">
-        <string>Adults:</string>
+        <string>Adults(18+):</string>
        </property>
       </widget>
       <widget class="QLabel" name="adultsLabel_2">
        <property name="geometry">
         <rect>
          <x>240</x>
-         <y>50</y>
+         <y>80</y>
          <width>59</width>
          <height>16</height>
         </rect>
@@ -160,11 +155,11 @@
         <string>Children:</string>
        </property>
       </widget>
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="startDatelabel">
        <property name="geometry">
         <rect>
-         <x>0</x>
-         <y>100</y>
+         <x>10</x>
+         <y>110</y>
          <width>71</width>
          <height>16</height>
         </rect>
@@ -173,58 +168,11 @@
         <string>Start Date:</string>
        </property>
       </widget>
-      <widget class="QDateEdit" name="StartDateEdit">
+      <widget class="QLabel" name="endDateLabel">
        <property name="geometry">
         <rect>
-         <x>80</x>
-         <y>100</y>
-         <width>110</width>
-         <height>22</height>
-        </rect>
-       </property>
-       <property name="minimumDateTime">
-        <datetime>
-         <hour>0</hour>
-         <minute>0</minute>
-         <second>0</second>
-         <year>2019</year>
-         <month>9</month>
-         <day>20</day>
-        </datetime>
-       </property>
-       <property name="minimumDate">
-        <date>
-         <year>2019</year>
-         <month>9</month>
-         <day>20</day>
-        </date>
-       </property>
-      </widget>
-      <widget class="QDateEdit" name="endDateEdit">
-       <property name="geometry">
-        <rect>
-         <x>330</x>
-         <y>100</y>
-         <width>110</width>
-         <height>22</height>
-        </rect>
-       </property>
-       <property name="minimumDateTime">
-        <datetime>
-         <hour>0</hour>
-         <minute>0</minute>
-         <second>0</second>
-         <year>1752</year>
-         <month>10</month>
-         <day>14</day>
-        </datetime>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_2">
-       <property name="geometry">
-        <rect>
-         <x>240</x>
-         <y>100</y>
+         <x>230</x>
+         <y>110</y>
          <width>81</width>
          <height>16</height>
         </rect>
@@ -233,53 +181,201 @@
         <string>End Date:</string>
        </property>
       </widget>
+      <widget class="QDateEdit" name="endDateCalander">
+       <property name="geometry">
+        <rect>
+         <x>300</x>
+         <y>110</y>
+         <width>110</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>150</y>
+         <width>181</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Do you need Vehicle Parking</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkBox">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>150</y>
+         <width>151</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string> Yes Price: $12.75</string>
+       </property>
+      </widget>
+      <widget class="QDateEdit" name="startDateCalander">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>110</y>
+         <width>110</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="reservationNameLabel">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>10</y>
+         <width>121</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Reservation Name:</string>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="reservationNameText">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>10</y>
+         <width>161</width>
+         <height>21</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>50</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Room Type:</string>
+       </property>
+      </widget>
      </widget>
-     <widget class="QLabel" name="ReservationNameLabel">
+     <widget class="QPushButton" name="nextButton">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>20</y>
-        <width>121</width>
-        <height>21</height>
+        <x>390</x>
+        <y>310</y>
+        <width>114</width>
+        <height>32</height>
        </rect>
       </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
       <property name="text">
-       <string>Reservation Name:</string>
+       <string>Next</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_2"/>
-   </widget>
-   <widget class="QPushButton" name="nextButton">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>400</x>
-      <y>350</y>
-      <width>114</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
-    <property name="text">
-     <string>Next</string>
-    </property>
-    <property name="checkable">
-     <bool>false</bool>
-    </property>
-    <property name="autoDefault">
-     <bool>false</bool>
-    </property>
-    <property name="default">
-     <bool>false</bool>
-    </property>
-    <property name="flat">
-     <bool>false</bool>
-    </property>
+    <widget class="QWidget" name="page_2">
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>80</y>
+        <width>371</width>
+        <height>251</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLabel" name="costAndPayInformation">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>20</y>
+         <width>191</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Cost And Pay Information</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="roomCostLabel">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>60</y>
+         <width>161</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="taxLabel">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>80</y>
+         <width>161</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="parkingCostLabel">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>100</y>
+         <width>161</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="resortFeeCost">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>120</y>
+         <width>161</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">

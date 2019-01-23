@@ -16,13 +16,13 @@ public:
     ~ResortReservation();
 
 private slots:
-    void on_NextButton_clicked();
 
 
 
-    void on_radioButton_clicked();
 
-    void on_comboBox_activated(const QString &arg1);
+
+
+
 
 
 
@@ -32,7 +32,25 @@ private slots:
 
 
 
-    void on_StartDateEdit_userDateChanged(const QDate &date);
+
+
+
+
+    void on_startDateCalander_dateChanged(const QDate &date);
+
+
+
+    void on_startDateCalander_userDateChanged(const QDate &date);
+
+
+
+
+
+    void on_nextButton_clicked();
+
+    void on_roomTypeSelection_activated(const QString &arg1);
+
+    void on_roomTypeSelection_currentIndexChanged(const QString &arg1);
 
 private:
     Ui::ResortReservation *ui;
