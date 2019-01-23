@@ -1,24 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>ResortReservation</class>
- <widget class="QMainWindow" name="ResortReservation" >
-  <property name="geometry" >
+ <widget class="QMainWindow" name="ResortReservation">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>550</width>
+    <height>455</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>ResortReservation</string>
   </property>
-  <widget class="QMenuBar" name="menuBar" />
-  <widget class="QToolBar" name="mainToolBar" />
-  <widget class="QWidget" name="centralWidget" />
-  <widget class="QStatusBar" name="statusBar" />
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>-10</y>
+      <width>541</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="page">
+     <widget class="QTextEdit" name="ReservationNameText">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>20</y>
+        <width>161</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>110</y>
+        <width>451</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>GroupBox</string>
+      </property>
+      <widget class="QComboBox" name="comboBox">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>30</y>
+         <width>301</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>A Standard 2-queen room</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>An Atrium 2-queen room</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>An Atrium 1-king room</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>A Standard 1-king room</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="PriceLabel">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>30</y>
+         <width>59</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Price:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="ActualPriceLabel">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>30</y>
+         <width>59</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>$284</string>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="numberOfAdultsSpinBox">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>50</y>
+         <width>42</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>4</number>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="numberOfChildrenSpinBox">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>50</y>
+         <width>42</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="maximum">
+        <number>4</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>50</y>
+         <width>59</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Adults</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>50</y>
+         <width>59</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Children</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="ReservationNameLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Reservation Name:</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2"/>
+   </widget>
+   <widget class="QPushButton" name="nextButton">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>350</y>
+      <width>114</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="text">
+     <string>Next</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>550</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
  </widget>
- <layoutDefault spacing="6" margin="11" />
- <pixmapfunction></pixmapfunction>
+ <layoutdefault spacing="6" margin="11"/>
  <resources/>
  <connections/>
 </ui>
