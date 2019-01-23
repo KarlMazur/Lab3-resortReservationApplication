@@ -2,6 +2,7 @@
 #include "ui_resortreservation.h"
 #include "iostream"
 #include "string"
+#include <QMessageBox>
 ResortReservation::ResortReservation(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::ResortReservation)
@@ -17,10 +18,6 @@ ui->startDateCalander->setDate(QDate::currentDate());
 ui->startDateCalander->setMinimumDate(QDate::currentDate());
  newDate=issueDate.addDays(8);
 ui->endDateCalander->setMaximumDate(newDate);
-ui->creditCardNumber->setInputMask("9999-999999-99999;_");
-ui->expDateLineEdit->setInputMask("99/9999;_");
-
-
 }
 
 ResortReservation::~ResortReservation()
@@ -149,6 +146,8 @@ ui->priceForRoomLabel->setText(stringCostOfRoom);
 ui->taxCostLabel->setText(stringtaxCost);
 ui->ResortCostLabel->setText(stringResortFee);
 ui->totalCostLabel->setText(stringfinalCost);
+ui->creditCardNumber->setInputMask("9999-999999-99999;_");
+ui->expDateLineEdit->setInputMask("99/9999;_");
 }
 
 void ResortReservation::on_roomTypeSelection_activated(const QString &arg1)
@@ -202,5 +201,36 @@ ui->creditCardNumber->setInputMask("9999-999999-99999;_");
 ui->creditCardNumber->setInputMask("9999-9999-9999-9999;_");
     }
 
+
+}
+
+void ResortReservation::on_goBackButton_clicked()
+{
+    ui->roomReservation->setCurrentIndex(0);
+    ui->creditCardNumber->clear();
+    ui->expDateLineEdit->clear();
+
+}
+
+void ResortReservation::on_confirmationButton_clicked()
+{
+    QMessageBox comfirm;
+    comfirm.setText("Are you sure you want to continue?");
+        comfirm.setStandardButtons(QMessageBox::Yes|QMessageBox::No);
+        comfirm.setDefaultButton(QMessageBox::Yes);
+        int comfirmationIndex=comfirm.exec();
+        if(comfirmationIndex==QMessageBox::Yes){
+    ui->roomReservation->setCurrentIndex(2);
+
+        }
+        else{
+            ui->roomReservation->setCurrentIndex(3);
+}
+}
+
+
+void ResortReservation::on_exitButton_clicked()
+{
+    QApplication::quit();
 
 }

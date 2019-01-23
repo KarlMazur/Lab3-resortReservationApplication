@@ -56,6 +56,13 @@ private slots:
 
     void on_creditCardType_currentIndexChanged(const QString &arg1);
 
+    void on_goBackButton_clicked();
+
+    void on_confirmationButton_clicked();
+
+
+    void on_exitButton_clicked();
+
 private:
     Ui::ResortReservation *ui;
 };
