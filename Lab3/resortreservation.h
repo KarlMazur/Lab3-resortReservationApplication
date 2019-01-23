@@ -24,6 +24,16 @@ private slots:
 
     void on_comboBox_activated(const QString &arg1);
 
+
+
+    void on_numberOfAdultsSpinBox_valueChanged(int arg1);
+
+    void on_numberOfChildrenSpinBox_valueChanged(int arg1);
+
+
+
+    void on_StartDateEdit_userDateChanged(const QDate &date);
+
 private:
     Ui::ResortReservation *ui;
 };

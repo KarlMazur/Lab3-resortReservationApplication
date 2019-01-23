@@ -131,23 +131,23 @@
         </rect>
        </property>
        <property name="maximum">
-        <number>4</number>
+        <number>3</number>
        </property>
       </widget>
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="adultsLabel">
        <property name="geometry">
         <rect>
          <x>40</x>
          <y>50</y>
-         <width>59</width>
+         <width>91</width>
          <height>16</height>
         </rect>
        </property>
        <property name="text">
-        <string>Adults</string>
+        <string>Adults:</string>
        </property>
       </widget>
-      <widget class="QLabel" name="label_2">
+      <widget class="QLabel" name="adultsLabel_2">
        <property name="geometry">
         <rect>
          <x>240</x>
@@ -157,7 +157,80 @@
         </rect>
        </property>
        <property name="text">
-        <string>Children</string>
+        <string>Children:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>100</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Start Date:</string>
+       </property>
+      </widget>
+      <widget class="QDateEdit" name="StartDateEdit">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>100</y>
+         <width>110</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="minimumDateTime">
+        <datetime>
+         <hour>0</hour>
+         <minute>0</minute>
+         <second>0</second>
+         <year>2019</year>
+         <month>9</month>
+         <day>20</day>
+        </datetime>
+       </property>
+       <property name="minimumDate">
+        <date>
+         <year>2019</year>
+         <month>9</month>
+         <day>20</day>
+        </date>
+       </property>
+      </widget>
+      <widget class="QDateEdit" name="endDateEdit">
+       <property name="geometry">
+        <rect>
+         <x>330</x>
+         <y>100</y>
+         <width>110</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="minimumDateTime">
+        <datetime>
+         <hour>0</hour>
+         <minute>0</minute>
+         <second>0</second>
+         <year>1752</year>
+         <month>10</month>
+         <day>14</day>
+        </datetime>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>100</y>
+         <width>81</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>End Date:</string>
        </property>
       </widget>
      </widget>
