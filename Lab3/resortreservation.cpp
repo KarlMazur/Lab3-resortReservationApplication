@@ -215,17 +215,36 @@ void ResortReservation::on_goBackButton_clicked()
 void ResortReservation::on_confirmationButton_clicked()
 {
     QMessageBox comfirm;
+    QString reservationName= ui->reservationNameText->toPlainText();
+    QString checkInDate=ui->startDateCalander->text();
+    QString checkOutDate=ui->endDateCalander->text();
+    QString roomType=ui->roomTypeSelection->currentText();
+    QString numberOfAdults=ui->numberOfAdultsSpinBox->text();
+    QString numberOfChildren=ui->numberOfChildrenSpinBox->text();
+    bool parkingChecked=ui->vechicleParkingCheckBox->checkState();
     comfirm.setText("Are you sure you want to continue?");
         comfirm.setStandardButtons(QMessageBox::Yes|QMessageBox::No);
         comfirm.setDefaultButton(QMessageBox::Yes);
         int comfirmationIndex=comfirm.exec();
         if(comfirmationIndex==QMessageBox::Yes){
     ui->roomReservation->setCurrentIndex(2);
+ui->finalReservationName->setText(reservationName);
+ui->finalCheckInDate->setText(checkInDate);
+ui->finalCheckOutDate->setText(checkOutDate);
+ui->finalRoomType->setText(roomType);
+ui->finalNumberOfAdults->setText(numberOfAdults);
+ui->finalNumberOfChildren->setText(numberOfChildren);
+if(parkingChecked==0)
+    ui->finalParking->setText("No");
+else {
+    ui->finalParking->setText("Yes");
+}
+
 
         }
-        else{
+        else
             ui->roomReservation->setCurrentIndex(3);
-}
+
 }
 
 
