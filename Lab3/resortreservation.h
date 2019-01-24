@@ -63,6 +63,19 @@ private slots:
 
     void on_exitButton_clicked();
 
+
+
+    void on_endDateCalander_dateChanged(const QDate &date);
+
+
+
+
+
+
+
+
+    void on_reservationNameText_copyAvailable(bool b);
+
 private:
     Ui::ResortReservation *ui;
 };
