@@ -257,9 +257,11 @@ void ResortReservation::on_roomTypeSelection_currentIndexChanged(const QString &
 {
     QString defaultText = "------------------------------------------";
     QString currentInformation=ui->reservationNameText->toPlainText();
+    bool a=ui->reservationNameText->toPlainText().isEmpty();
 
+      QString currentSelectedRoom=ui->roomTypeSelection->currentText();
 
-    if(currentInformation!=""&&arg1!=defaultText){
+    if((a==0&&currentSelectedRoom!=defaultText)){
         ui->nextButton->show();
     }
     else
@@ -364,8 +366,28 @@ void ResortReservation::on_reservationNameText_copyAvailable(bool b)
 {
     QString currentInformation=ui->reservationNameText->toPlainText();
     QString currentSelectedRoom=ui->roomTypeSelection->currentText();
+    bool a=ui->reservationNameText->toPlainText().isEmpty();
     QString defaultText = "------------------------------------------";
-    if((currentInformation!="")&&(currentSelectedRoom!=defaultText)){
+   if((a==0&&currentSelectedRoom!=defaultText)){
         ui->nextButton->show();
+    }
+    else if (a==1){
+        ui->nextButton->hide();
+    }
+}
+
+
+
+void ResortReservation::on_reservationNameText_textChanged()
+{
+    QString currentInformation=ui->reservationNameText->toPlainText();
+    QString currentSelectedRoom=ui->roomTypeSelection->currentText();
+    bool a=ui->reservationNameText->toPlainText().isEmpty();
+    QString defaultText = "------------------------------------------";
+   if((a==0&&currentSelectedRoom!=defaultText)){
+        ui->nextButton->show();
+    }
+    else if (a==1){
+        ui->nextButton->hide();
     }
 }

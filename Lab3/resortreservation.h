@@ -76,6 +76,10 @@ private slots:
 
     void on_reservationNameText_copyAvailable(bool b);
 
+
+
+    void on_reservationNameText_textChanged();
+
 private:
     Ui::ResortReservation *ui;
 };
